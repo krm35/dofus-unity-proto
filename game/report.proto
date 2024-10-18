@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ;
+package com.ankama.dofus.server.game;
 
 message ReportRequest {
 	int64 actor_id = 1;
