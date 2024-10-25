@@ -1884,3 +1884,11 @@ message SpellModifier {
 	int32 equipment = 5;
 }
 
+message PlayAnimationEvent {
+	string animation = 1;
+}
+
+message PlaySpellScriptEvent {
+	int32 scriptId = 1;
+}
+

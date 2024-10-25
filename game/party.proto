@@ -79,6 +79,108 @@ message PartyNameSetRequest {
 	string name = 2;
 }
 
+message AutoFollowActivationRequest {
+}
+
+message AutoFollowActivationResponse {
+	.com.ankama.dofus.server.game.protocol.party.AutoFollowActivationResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message AutoFollowActivatedEvent {
+	int64 player_id = 1;
+}
+
+message AutoFollowDeactivationRequest {
+}
+
+message AutoFollowDeactivationResponse {
+	.com.ankama.dofus.server.game.protocol.party.AutoFollowDeactivationResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message AutoFollowDeactivatedEvent {
+	int64 player_id = 1;
+}
+
+message LeaderPositionEvent {
+	int64 player_id = 1;
+	.com.ankama.dofus.server.game.protocol.common.MapExtendedCoordinates map = 2;
+	int32 cell_id = 3;
+}
+
+message FightAutoJoinActivationRequest {
+}
+
+message FightAutoJoinActivationResponse {
+	.com.ankama.dofus.server.game.protocol.party.FightAutoJoinActivationResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message FightAutoJoinActivatedEvent {
+	int64 player_id = 1;
+}
+
+message FightAutoJoinDeactivationRequest {
+}
+
+message FightAutoJoinDeactivatedResponse {
+	.com.ankama.dofus.server.game.protocol.party.FightAutoJoinDeactivatedResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message FightAutoJoinDeactivatedEvent {
+	int64 player_id = 1;
+}
+
+message FightAutoReadyActivationRequest {
+}
+
+message FightAutoReadyActivationResponse {
+	.com.ankama.dofus.server.game.protocol.party.FightAutoReadyActivationResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message FightAutoReadyActivatedEvent {
+	int64 player_id = 1;
+}
+
+message FightAutoReadyDeactivationRequest {
+}
+
+message FightAutoReadyDeactivationResponse {
+	.com.ankama.dofus.server.game.protocol.party.FightAutoReadyDeactivationResponse.Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+
+}
+
+message FightAutoReadyDeactivatedEvent {
+	int64 player_id = 1;
+}
+
 message PartyInvitationEvent {
 	int32 party_id = 1;
 	.com.ankama.dofus.server.game.protocol.party.PartyType party_type = 2;
