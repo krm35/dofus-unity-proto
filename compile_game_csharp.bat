@@ -21,7 +21,7 @@ for %%F in ("%includesDir%\*") do (
     :: Run the protoc command for each file
     echo Processing !fileName!...
     ::protoc -I. --proto_path=%includesDir%/ --csharp_out=./%outputDir% %includesDir%/!fileName!
-    protogen --proto_path=%includesDir% +listset=yes +names=auto +repeatedaslist=yes --csharp_out=%outputDir% +oneof=enum !fileName!
+    protogen --proto_path=%includesDir% +listset=yes +names=auto +repeatedaslist=yes --mapping=game_mappings.json --csharp_out=%outputDir% +oneof=enum !fileName!
 
     :: Check if the command was successful
     if !errorlevel! equ 0 (
